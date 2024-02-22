@@ -9,7 +9,7 @@ object GpLoginVerifier {
 
     private const val SERVER_CLIENT_ID = "1038253465945-e5pi3qh12kevb2hnjdqe32esrg3884s2.apps.googleusercontent.com"
 
-    fun verify(idToken: String) {
+    fun verify(idToken: String): Boolean {
         val verifier = GoogleIdTokenVerifier.Builder(
             GoogleNetHttpTransport.newTrustedTransport(),
             GsonFactory.getDefaultInstance()
@@ -17,17 +17,19 @@ object GpLoginVerifier {
             .setAudience(arrayListOf(SERVER_CLIENT_ID))
             .build()
 
-        verifier.verify(idToken)?.let { token ->
-            val payload = token.payload
-            val userId = payload.subject
-            val email = payload.email
-            val emailVerified = payload.emailVerified
-            println("userId = $userId")
-            println("email = $email")
-            println("emailVerified = $emailVerified")
-            for (key in payload.keys) {
-                println("$key =  ${payload[key]}")
-            }
+        val token = verifier.verify(idToken) ?: return false
+
+        // token不为空验证通过
+        val payload = token.payload
+        val userId = payload.subject
+        val email = payload.email
+        val emailVerified = payload.emailVerified
+        println("userId = $userId")
+        println("email = $email")
+        println("emailVerified = $emailVerified")
+        for (key in payload.keys) {
+            println("$key =  ${payload[key]}")
         }
+        return true
     }
 }

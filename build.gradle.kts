@@ -26,6 +26,9 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     implementation("com.google.api-client:google-api-client:1.32.1")
+
+    implementation("com.google.apis:google-api-services-androidpublisher:v3-rev20230208-2.0.0")
+    implementation("com.google.auth:google-auth-library-oauth2-http:1.23.0")
 }
 
 tasks.withType<KotlinCompile> {

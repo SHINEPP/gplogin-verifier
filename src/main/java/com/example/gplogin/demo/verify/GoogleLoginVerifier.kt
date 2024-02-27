@@ -5,7 +5,7 @@ import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport
 import com.google.api.client.json.gson.GsonFactory
 
 
-object GpLoginVerifier {
+object GoogleLoginVerifier {
 
     private const val SERVER_CLIENT_ID = "1038253465945-e5pi3qh12kevb2hnjdqe32esrg3884s2.apps.googleusercontent.com"
 

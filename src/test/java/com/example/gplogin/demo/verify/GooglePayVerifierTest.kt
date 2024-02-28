@@ -8,7 +8,7 @@ class GooglePayVerifierTest {
 
     @Test
     fun getProductPurchase() {
-        GooglePayVerifier.getProductPurchase("com.period.tracker.health.reminder.women.v1.10coins",
-            "naipcpepaimaodmchilbdklp.AO-J1OyHVw3IXA7mD74ysPuALx3W_S_znNibWZ9k8t5-4CsQ7bD-o0ay16jMdIf_F4zAdQStewsUQ2gyRGOsS1cjl76Mh6wHiKAwjhr8JubEYspG-IEwhYdx2r20GEQrkZDWWAmzhFqK")
+        GooglePayVerifier.consumeProductPurchase("com.period.tracker.health.reminder.women.v1.10coins",
+            "kjegdaaaaadgddadfbkpijil.AO-J1OwC0DhNEIcgDDD9wa8Mi9kkdRWRHbGgdlTRwX8Seut0BafIFChfYW1TeHnHkQLPCze2m2Fm0QRgz2xt2gye1jMnrBrETcljVAq-04UWXBb4b_SoPCZRxu0HKh4hL-Ew4vDEVZPk")
     }
 }

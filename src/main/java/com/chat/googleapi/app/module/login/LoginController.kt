@@ -19,11 +19,11 @@ object LoginController {
         if (token.isNullOrEmpty()) {
             result.code = 5001
             result.msg = "params error, token is null or empty"
-            result.userInfo = ""
+            result.userInfo = null
         } else {
             result.code = 200
             result.msg = "success"
-            result.userInfo = fetchUserInfo(token) ?: ""
+            result.userInfo = fetchUserInfo(token)
         }
         return Gson().toJson(result)
     }

@@ -10,7 +10,7 @@ class ResponseData {
     var msg = ""
 
     @SerializedName("data")
-    var userInfo: Any? = null
+    var userInfo: UserInfo? = null
 }
 
 class UserInfo {

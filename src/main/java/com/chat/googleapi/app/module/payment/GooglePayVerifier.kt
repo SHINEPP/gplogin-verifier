@@ -14,7 +14,13 @@ object GooglePayVerifier {
     private const val PACKAGE_NAME = "com.period.tracker.health.reminder.women"
     private const val CREDENTIALS_PATH = "storage-file-manager-c513341ef071.json"
 
-    // 消耗商品购买状态 - 已购买
+    /**
+     * 0: Purchased （已购买）- 表示用户已经成功购买了该产品。
+     * 1: Pending （待处理）- 表示购买尚未完成，可能是因为正在等待支付处理，或者正在等待其他操作完成。
+     * 2: Cancelled （已取消）- 表示用户取消了购买操作。
+     * 3: Refunded （已退款）- 表示用户已经被退款。
+     * 4: Expired （已过期）- 表示购买操作已经过期。
+     */
     private const val PRODUCT_PURCHASE_PURCHASE_STATE_PURCHASED = 0
 
     // 消耗商品消耗状态 - 未消耗

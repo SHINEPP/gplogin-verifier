@@ -29,6 +29,11 @@ dependencies {
 
     implementation("com.google.apis:google-api-services-androidpublisher:v3-rev20230208-2.0.0")
     implementation("com.google.auth:google-auth-library-oauth2-http:1.23.0")
+
+    implementation("io.jsonwebtoken:jjwt-api:0.12.5")
+    implementation("io.jsonwebtoken:jjwt-impl:0.12.5")
+    implementation("io.jsonwebtoken:jjwt-jackson:0.12.5")
+    implementation("com.alibaba.fastjson2:fastjson2:2.0.47")
 }
 
 tasks.withType<KotlinCompile> {
